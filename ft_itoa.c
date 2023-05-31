@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afedida <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/02 18:00:21 by afedida           #+#    #+#             */
-/*   Updated: 2023/02/07 12:27:20 by afedida          ###   ########.fr       */
+/*   Created: 2023/05/31 14:54:03 by afedida           #+#    #+#             */
+/*   Updated: 2023/05/31 14:54:17 by afedida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	digit_count(int n)
+static int	digit_count(int n)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	digit_count(int n)
 	return (i);
 }
 
-char	*ft_itoa_f2(char *s, int i, int m, int n)
+static char	*ft_itoa_f2(char *s, int i, int m, int n)
 {
 	while (i--)
 	{

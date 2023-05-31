@@ -45,7 +45,7 @@ SRCS = ft_atoi.c		\
 		ft_tolower.c	\
 		ft_toupper.c	\
 
-# SRCSB = ft_lsnew.c	\
+SRCSB = $(SRCS)
 
 NAME = libft.a
 

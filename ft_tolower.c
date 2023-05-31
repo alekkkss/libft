@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afedida <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/02 18:00:21 by afedida           #+#    #+#             */
-/*   Updated: 2023/02/07 12:27:20 by afedida          ###   ########.fr       */
+/*   Created: 2023/05/31 15:02:33 by afedida           #+#    #+#             */
+/*   Updated: 2023/05/31 15:02:34 by afedida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_tolower(int c)
 {
-	if ((unsigned char) c >= 65 && c <= 90)
+	if ((unsigned char) c >= 65 && (unsigned char) c <= 90)
 		c += 32;
-	return ((unsigned char) c);
+	return (c);
 }
 
 // int	main(void)

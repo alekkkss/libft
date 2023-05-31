@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afedida <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/02 18:00:21 by afedida           #+#    #+#             */
-/*   Updated: 2023/02/07 12:27:20 by afedida          ###   ########.fr       */
+/*   Created: 2023/05/31 14:58:09 by afedida           #+#    #+#             */
+/*   Updated: 2023/05/31 14:58:11 by afedida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	string_counter(char const *s, char c)
+static int	string_counter(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -36,7 +36,7 @@ int	string_counter(char const *s, char c)
 	return (j);
 }
 
-int	ft_strlen_split(char const *s, char c, int j)
+static int	ft_strlen_split(char const *s, char c, int j)
 {
 	int	i;
 

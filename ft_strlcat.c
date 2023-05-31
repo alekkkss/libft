@@ -6,7 +6,7 @@
 /*   By: afedida <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 18:00:21 by afedida           #+#    #+#             */
-/*   Updated: 2023/02/07 12:27:20 by afedida          ###   ########.fr       */
+/*   Updated: 2023/05/31 15:00:05 by afedida          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@
 // 	}
 // }
 
-const char	*ft_strlcat_2(char *dst, const char *src, size_t dstsize)
+static const char	*ft_strlcat_2(char *dst, const char *src, size_t dstsize)
 {
 	size_t	d;
 	size_t	i;
