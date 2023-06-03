@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afedida <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alx <alx@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:01:48 by afedida           #+#    #+#             */
-/*   Updated: 2023/05/31 15:01:49 by afedida          ###   ########.fr       */
+/*   Updated: 2023/06/03 14:30:53 by alx              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 	// 	(void) set;
 	// }
 
-int	strt(char const *s1, char const *set)
+static int	strt(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -40,7 +40,7 @@ int	strt(char const *s1, char const *set)
 	return (0);
 }
 
-int	nd(char const *s1, char const *set)
+static int	nd(char const *s1, char const *set)
 {
 	int	i;
 	int	j;

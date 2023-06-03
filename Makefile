@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: afedida <rchallie@student.42.fr>           +#+  +:+       +#+         #
+#    By: alx <alx@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 11:05:52 by afedida           #+#    #+#              #
-#    Updated: 2020/08/13 22:17:48 by afedida          ###   ########.fr        #
+#    Updated: 2023/06/03 14:40:27 by alx              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ SRCS = ft_atoi.c		\
 		ft_strtrim.c	\
 		ft_substr.c		\
 		ft_tolower.c	\
-		ft_toupper.c	\
+		ft_toupper.c
 
 SRCSB = $(SRCS)
 
@@ -51,10 +51,10 @@ NAME = libft.a
 
 OBJS_DIR = objs/
 OBJS = $(SRCS:.c=.o)
-OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
+OBJS_PRE = $(addprefix $(OBJS_DIR), $(OBJS))
 
 OBJSB = $(SRCSB:.c=.o)
-OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
+OBJSB_PRE = $(addprefix $(OBJS_DIR), $(OBJSB))
 
 CC = clang
 
@@ -65,8 +65,8 @@ $(OBJS_DIR)%.o : %.c libft.h
 	@echo "Compiling: $<"
 	@clang $(CC_FLAGS) -c $< -o $@
 
-$(NAME): $(OBJECTS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_PREFIXED)
+$(NAME): $(OBJS_PRE)
+	@ar r $(NAME) $(OBJS_PRE)
 	@echo "Libft Done !"
 
 all: $(NAME)
@@ -79,6 +79,6 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJECTS_BONUS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
-	@echo "Libft Bonus Done !"
+bonus: $(OBJSB_PRE)
+	@ar r $(NAME) $(OBJSB_PRE)
+#@echo "Libft Bonus Done !"
