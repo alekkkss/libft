@@ -6,7 +6,7 @@
 /*   By: alx <alx@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 18:00:21 by afedida           #+#    #+#             */
-/*   Updated: 2023/06/03 14:19:49 by alx              ###   ########.fr       */
+/*   Updated: 2023/06/03 20:26:12 by alx              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
 
 char		*ft_itoa(int n);
 char		*ft_strchr(const char *s, int c);
@@ -65,6 +59,12 @@ void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memset(void *b, int c, size_t len);
 
-// t_list		*ft_lstnew(void *content);
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+t_list		*ft_lstnew(void *content);
 
 #endif

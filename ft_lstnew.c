@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alx <alx@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/31 15:00:38 by afedida           #+#    #+#             */
-/*   Updated: 2023/06/03 14:46:34 by alx              ###   ########.fr       */
+/*   Created: 2023/05/31 15:03:04 by afedida           #+#    #+#             */
+/*   Updated: 2023/06/03 20:36:09 by alx              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*ptr;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	ptr = (t_list *) malloc (sizeof(t_list));
+	if (!ptr)
+		return (0);
+	ptr->content = content;
+	ptr->next = 0;
+	return (ptr);
 }
+
+// int	main(void)
+// {
+// 	printf("%c\n", ft_toupper('a'));
+// 	return (0);
+// }
